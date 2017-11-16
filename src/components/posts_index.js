@@ -35,3 +35,6 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
+
+// event loop job is to look at the stack, and at the task queue. If the stack is empty, it takes 
+// first thing on the queue and pushes on to the stack which effectively runs it
