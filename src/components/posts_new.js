@@ -5,11 +5,11 @@ class PostsNew extends Component {
 
     renderField (field) {
         return (
-            <div className="form-group">
+            <div className='form-group'>
                 <label>{field.label}</label>
                 <input
-                    className="form-control"
-                    type="text"
+                    className='form-control'
+                    type='text'
                     {...field.input}
                 />
             </div>
@@ -20,18 +20,18 @@ class PostsNew extends Component {
         return (
             <form>
                 <Field
-                    label="Title"
-                    name="title"
+                    label='Title'
+                    name='title'
                     component={this.renderField}
                 />
                 <Field
-                    label="Categories"
-                    name="categories"
+                    label='Categories'
+                    name='categories'
                     component={this.renderField}
                 />
                 <Field
-                    label="Post Content"
-                    name="content"
+                    label='Post Content'
+                    name='content'
                     component={this.renderField}
                     />
             </form>
@@ -43,6 +43,9 @@ function validate (values) {
     const erros = {};
 
     // Validate the inputs from 'values'
+    if (!values.title) {
+        errors.title = 'Enter a title!';
+    }
 
     // If errors is empty, the form is fine to submit
     // If errors has *any* properties, redux form assumes form is invalid
