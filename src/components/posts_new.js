@@ -40,7 +40,13 @@ class PostsNew extends Component {
 }
 
 function validate (values) {
-    
+    const erros = {};
+
+    // Validate the inputs from 'values'
+
+    // If errors is empty, the form is fine to submit
+    // If errors has *any* properties, redux form assumes form is invalid
+    return errors;
 }
 
 export default reduxForm({
