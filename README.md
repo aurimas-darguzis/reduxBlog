@@ -1,3 +1,3 @@
 # reduxBlog
 
-download -> npm install -> run
+download -> npm install -> npm start
